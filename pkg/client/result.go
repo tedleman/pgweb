@@ -150,6 +150,8 @@ func ObjectsFromResult(res *Result) map[string]*Objects {
 		switch object_type {
 		case "table":
 			objects[schema].Tables = append(objects[schema].Tables, name)
+		case "foreign_table":
+			objects[schema].Tables = append(objects[schema].Tables, name)
 		case "view":
 			objects[schema].Views = append(objects[schema].Views, name)
 		case "materialized_view":
